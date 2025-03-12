@@ -34,7 +34,7 @@ public class UpdateTimeTrack extends BaseClass {
 		h.getTimeSpent().sendKeys("7");
 		h.getOk().click();
 		h.getSave().click();
-
+		driver.navigate().refresh();
 	}
 	@Test (priority = 2)
 	public void ValidateTimeTrack() throws InterruptedException	{
@@ -128,9 +128,9 @@ public class UpdateTimeTrack extends BaseClass {
 		HomePage h= new HomePage(driver);
 		//h.getClose().click();
 		h.getAdminSysBtn().click();
-		
+
 		h.getEnterEmail().clear();
-		
+
 		h.getEnterEmail().sendKeys("abcd2650@gmail.com");
 		//Thread.sleep(1000);
 		h.getSaveChangesBtn().click();
@@ -143,8 +143,8 @@ public class UpdateTimeTrack extends BaseClass {
 		String aemail = u.getVerifyEmail().getText();
 		System.out.println("text is: "+aemail);
 		Thread.sleep(1000);
-//		Assert.assertEquals(aemail, email);
-//		Thread.sleep(1000);
+		//		Assert.assertEquals(aemail, email);
+		//		Thread.sleep(1000);
 		u.getClosePopup().click();
 	}
 
